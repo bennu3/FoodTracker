@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerForNotifications()
-
+        setupLogin()
     }
     private func registerForNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -26,6 +26,16 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
+    private func setupLogin() {
+        logoImageView.image = UIImage(named: "logo")
+        logoImageView.layer.cornerRadius = 180
+
+        loginButton.layer.cornerRadius = 20
+        loginButton.layer.shadowColor = UIColor.gray.cgColor
+        loginButton.layer.shadowOpacity = 0.8
+        loginButton.layer.shadowOffset = CGSize.zero
+        loginButton.layer.shadowRadius = 5
+    }
     
     @objc private func keyboardWillShow(_ notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {

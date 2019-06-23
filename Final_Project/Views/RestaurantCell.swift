@@ -22,14 +22,15 @@ class RestaurantCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        restaurantImageView.layer.cornerRadius = 20
     }
     var restaurant: Restaurant! {
         didSet {
             restaurantNameLabel.text = "\(restaurant.name) - \(restaurant.tagline)"
             restaurantImageView.image = UIImage(named: restaurant.imageName)
             restaurantLocationLabel.text = "\(restaurant.location)"
-            locationImageView.image = UIImage(named: "geo")
+            locationImageView.image = UIImage(named: "logo")
+            restaurantImageView.layer.cornerRadius = 20
+
         }
     }
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +32,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UAi-Wy-6k4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="map" id="Goj-5Y-cTj"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="map" id="Goj-5Y-cTj">
+                        <color key="badgeColor" name="mainColor"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="homeMapView" destination="ugd-hx-URL" id="nzi-a5-aJs"/>
@@ -44,5 +47,8 @@
     </scenes>
     <resources>
         <image name="map" width="30" height="30"/>
+        <namedColor name="mainColor">
+            <color red="0.77254901960784317" green="0.28235294117647058" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

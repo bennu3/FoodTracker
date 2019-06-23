@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,7 +83,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstItem="078-E2-gmX" firstAttribute="leading" secondItem="1Va-dN-YbD" secondAttribute="leading" constant="20" id="9h9-qh-NcV"/>
                                     <constraint firstItem="z5A-95-MA2" firstAttribute="leading" secondItem="1Va-dN-YbD" secondAttribute="leading" constant="20" id="BiO-Xm-CRy"/>
@@ -109,12 +110,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfv-GU-IO8">
-                                <rect key="frame" x="100" y="770.5" width="214" height="50"/>
-                                <color key="backgroundColor" red="0.62352941179999999" green="0.74117647060000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="180" y="770.5" width="54" height="50"/>
+                                <color key="backgroundColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IYx-Dp-i9U"/>
                                 </constraints>
-                                <state key="normal" title="&gt;"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="confirmButtonPressed:" destination="PeB-35-sBx" eventType="touchUpInside" id="xSk-Yg-qJA"/>
                                     <segue destination="Kl3-pR-d6F" kind="show" id="hGX-wm-THz"/>
@@ -125,10 +128,10 @@
                         <constraints>
                             <constraint firstItem="1Va-dN-YbD" firstAttribute="leading" secondItem="8At-Cq-nbW" secondAttribute="leading" constant="30" id="Ayr-8q-FwT"/>
                             <constraint firstItem="3su-Cr-CSk" firstAttribute="leading" secondItem="8At-Cq-nbW" secondAttribute="leading" constant="176" id="QF9-Ec-ndx"/>
-                            <constraint firstItem="8At-Cq-nbW" firstAttribute="trailing" secondItem="Mfv-GU-IO8" secondAttribute="trailing" constant="100" id="V3X-RV-ULA"/>
+                            <constraint firstItem="8At-Cq-nbW" firstAttribute="trailing" secondItem="Mfv-GU-IO8" secondAttribute="trailing" constant="180" id="V3X-RV-ULA"/>
                             <constraint firstItem="aBU-ON-lmk" firstAttribute="top" secondItem="8At-Cq-nbW" secondAttribute="top" constant="100" id="VYa-p5-Brp"/>
                             <constraint firstItem="aBU-ON-lmk" firstAttribute="leading" secondItem="8At-Cq-nbW" secondAttribute="leading" constant="30" id="Yuv-yv-Ctb"/>
-                            <constraint firstItem="Mfv-GU-IO8" firstAttribute="leading" secondItem="8At-Cq-nbW" secondAttribute="leading" constant="100" id="kuR-ya-eet"/>
+                            <constraint firstItem="Mfv-GU-IO8" firstAttribute="leading" secondItem="8At-Cq-nbW" secondAttribute="leading" constant="180" id="kuR-ya-eet"/>
                             <constraint firstItem="1Va-dN-YbD" firstAttribute="top" secondItem="aBU-ON-lmk" secondAttribute="bottom" constant="30" id="mL9-Mz-Np4"/>
                             <constraint firstItem="8At-Cq-nbW" firstAttribute="trailing" secondItem="1Va-dN-YbD" secondAttribute="trailing" constant="34" id="ml6-rg-ewF"/>
                             <constraint firstItem="3su-Cr-CSk" firstAttribute="top" secondItem="1Va-dN-YbD" secondAttribute="bottom" constant="60" id="pez-VW-cPq"/>
@@ -138,10 +141,12 @@
                         <viewLayoutGuide key="safeArea" id="8At-Cq-nbW"/>
                     </view>
                     <connections>
+                        <outlet property="confirmButtonLabel" destination="Mfv-GU-IO8" id="G57-qc-vV6"/>
                         <outlet property="confirmPasswordTextField" destination="Eco-Ac-ycc" id="dKK-BZ-Whd"/>
                         <outlet property="emailTextField" destination="Drn-XQ-N8J" id="axq-j1-LEO"/>
                         <outlet property="passwordTextField" destination="euN-5d-Rus" id="27O-P0-dhb"/>
                         <outlet property="usernameTextField" destination="078-E2-gmX" id="YBh-Jx-dMm"/>
+                        <outlet property="viewLabel" destination="1Va-dN-YbD" id="hyJ-Bx-RV7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5R-wv-cPW" sceneMemberID="firstResponder"/>
@@ -157,4 +162,9 @@
             <point key="canvasLocation" x="-65" y="563"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.77254901960784317" green="0.28235294117647058" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="mainColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="ArO-2i-V3S" kind="relationship" relationship="viewControllers" id="3MC-M9-tju"/>
@@ -56,9 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FgD-X5-ugF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FgD-X5-ugF">
                                 <rect key="frame" x="57" y="84" width="300" height="300"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="BLo-ZG-iKX"/>
                                     <constraint firstAttribute="height" constant="300" id="doz-u1-NsJ"/>
@@ -91,22 +92,22 @@
                                     <segue destination="6aW-8L-Eww" kind="show" id="bj5-Mx-tsv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmq-KG-QTP">
-                                <rect key="frame" x="95" y="732" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmq-KG-QTP">
+                                <rect key="frame" x="98" y="732" width="67" height="30"/>
                                 <state key="normal" title="Facebook"/>
                                 <connections>
                                     <action selector="fbSignUpButtonPressed:" destination="dgG-0h-I0q" eventType="touchUpInside" id="YQV-V0-F78"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMr-F0-zJJ">
-                                <rect key="frame" x="182" y="732" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMr-F0-zJJ">
+                                <rect key="frame" x="185" y="732" width="50" height="30"/>
                                 <state key="normal" title="Google"/>
                                 <connections>
                                     <action selector="ggButtonPressed:" destination="dgG-0h-I0q" eventType="touchUpInside" id="WRX-iZ-Rpz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSl-Fb-Iip">
-                                <rect key="frame" x="252" y="732" width="69" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSl-Fb-Iip">
+                                <rect key="frame" x="255" y="732" width="69" height="30"/>
                                 <state key="normal" title="Instagram"/>
                                 <connections>
                                     <action selector="igButonPressed:" destination="dgG-0h-I0q" eventType="touchUpInside" id="ywQ-xR-2NQ"/>
@@ -120,12 +121,14 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yif-aX-qzg">
                                 <rect key="frame" x="80" y="614" width="254" height="50"/>
-                                <color key="backgroundColor" red="0.62352941179999999" green="0.74117647060000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nDa-Kq-QLg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="c05-o6-LKE" kind="presentation" id="XMv-h7-CJE"/>
                                 </connections>
@@ -137,6 +140,7 @@
                             <constraint firstItem="p6e-Qn-LJb" firstAttribute="leading" secondItem="hUj-oV-cbk" secondAttribute="leading" constant="50" id="76J-Cg-1qg"/>
                             <constraint firstItem="U1S-Sm-GTg" firstAttribute="top" secondItem="p6e-Qn-LJb" secondAttribute="bottom" constant="20" id="9m9-Nf-rCl"/>
                             <constraint firstItem="yif-aX-qzg" firstAttribute="top" secondItem="U1S-Sm-GTg" secondAttribute="bottom" constant="30" id="ASh-6g-baF"/>
+                            <constraint firstItem="hUj-oV-cbk" firstAttribute="trailing" secondItem="JSl-Fb-Iip" secondAttribute="trailing" constant="90" id="AeK-C2-n4K"/>
                             <constraint firstItem="FgD-X5-ugF" firstAttribute="top" secondItem="hUj-oV-cbk" secondAttribute="top" constant="40" id="BU9-NN-Jg4"/>
                             <constraint firstItem="hUj-oV-cbk" firstAttribute="trailing" secondItem="p6e-Qn-LJb" secondAttribute="trailing" constant="50" id="EQQ-i1-zw5"/>
                             <constraint firstItem="yMr-F0-zJJ" firstAttribute="leading" secondItem="kmq-KG-QTP" secondAttribute="trailing" constant="20" id="PQi-Oj-0QH"/>
@@ -147,10 +151,11 @@
                             <constraint firstItem="hUj-oV-cbk" firstAttribute="trailing" secondItem="yif-aX-qzg" secondAttribute="trailing" constant="80" id="Zoy-qU-1zq"/>
                             <constraint firstItem="JSl-Fb-Iip" firstAttribute="centerY" secondItem="yMr-F0-zJJ" secondAttribute="centerY" id="ebg-2K-iva"/>
                             <constraint firstItem="hUj-oV-cbk" firstAttribute="bottom" secondItem="E3M-Dp-vBG" secondAttribute="bottom" constant="30" id="hHW-Z7-yTT"/>
-                            <constraint firstItem="yMr-F0-zJJ" firstAttribute="centerX" secondItem="hUj-oV-cbk" secondAttribute="centerX" id="hWn-Xv-QeF"/>
+                            <constraint firstItem="yMr-F0-zJJ" firstAttribute="top" secondItem="yif-aX-qzg" secondAttribute="bottom" constant="68" id="hOZ-jV-csV"/>
                             <constraint firstItem="p6e-Qn-LJb" firstAttribute="top" secondItem="FgD-X5-ugF" secondAttribute="bottom" constant="80" id="jF7-bq-yuG"/>
                             <constraint firstItem="E3M-Dp-vBG" firstAttribute="centerY" secondItem="S9W-EQ-FfO" secondAttribute="centerY" id="jNE-jz-snP"/>
                             <constraint firstItem="yif-aX-qzg" firstAttribute="leading" secondItem="hUj-oV-cbk" secondAttribute="leading" constant="80" id="ol9-Qn-HK1"/>
+                            <constraint firstItem="E3M-Dp-vBG" firstAttribute="top" secondItem="yMr-F0-zJJ" secondAttribute="bottom" constant="36" id="prh-IP-DJh"/>
                             <constraint firstItem="hUj-oV-cbk" firstAttribute="trailing" secondItem="U1S-Sm-GTg" secondAttribute="trailing" constant="50" id="u1C-AH-5do"/>
                             <constraint firstItem="JSl-Fb-Iip" firstAttribute="leading" secondItem="yMr-F0-zJJ" secondAttribute="trailing" constant="20" id="uii-gO-JVy"/>
                             <constraint firstItem="hUj-oV-cbk" firstAttribute="trailing" secondItem="S9W-EQ-FfO" secondAttribute="trailing" constant="120" id="vtb-lI-jSP"/>
@@ -177,4 +182,9 @@
             <point key="canvasLocation" x="-2962" y="486"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.77254901960784317" green="0.28235294117647058" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

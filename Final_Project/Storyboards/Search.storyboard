@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="42D-Qg-utm">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FoodSearch-->
+        <scene sceneID="meL-NT-CRb">
+            <objects>
+                <viewController id="X1a-l7-H7W" customClass="SearchViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8KN-FU-ijt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="yKr-Ca-R5N">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantCell" rowHeight="250" id="yfi-KW-0fy" customClass="RestaurantCell" customModule="Final_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" tableViewCell="yfi-KW-0fy" id="VU5-kt-XeT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="TFf-xe-MIc">
+                                                    <rect key="frame" x="5" y="5.5" width="404" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="AMs-7h-98k"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-y4-s4H">
+                                                    <rect key="frame" x="10" y="216.5" width="49" height="28"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-oY-Jyd">
+                                                    <rect key="frame" x="323" y="220.5" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="Fud-PR-oE5"/>
+                                                        <constraint firstAttribute="width" constant="24" id="MQv-pY-YSF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfa-X3-lLu">
+                                                    <rect key="frame" x="355" y="215.5" width="49" height="29"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aDb-y4-s4H" firstAttribute="leading" secondItem="VU5-kt-XeT" secondAttribute="leading" constant="10" id="3bx-ql-yct"/>
+                                                <constraint firstItem="TFf-xe-MIc" firstAttribute="leading" secondItem="VU5-kt-XeT" secondAttribute="leading" constant="5" id="74X-Sc-sEM"/>
+                                                <constraint firstItem="Gfa-X3-lLu" firstAttribute="leading" secondItem="iVR-oY-Jyd" secondAttribute="trailing" constant="8" id="CUr-DD-AW2"/>
+                                                <constraint firstItem="TFf-xe-MIc" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="VU5-kt-XeT" secondAttribute="centerX" id="JPD-p0-YAR"/>
+                                                <constraint firstItem="aDb-y4-s4H" firstAttribute="top" secondItem="TFf-xe-MIc" secondAttribute="bottom" constant="11" id="Pqv-yb-L2U"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gfa-X3-lLu" secondAttribute="bottom" constant="10" id="YkY-SH-6Ky"/>
+                                                <constraint firstItem="iVR-oY-Jyd" firstAttribute="top" secondItem="TFf-xe-MIc" secondAttribute="bottom" constant="15" id="b26-7t-Uy0"/>
+                                                <constraint firstAttribute="bottom" secondItem="iVR-oY-Jyd" secondAttribute="bottom" constant="10" id="ho8-Gp-SD1"/>
+                                                <constraint firstAttribute="trailing" secondItem="TFf-xe-MIc" secondAttribute="trailing" constant="5" id="rhU-cM-kE3"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gfa-X3-lLu" secondAttribute="trailing" constant="10" id="uHD-0X-6Xk"/>
+                                                <constraint firstItem="TFf-xe-MIc" firstAttribute="top" secondItem="VU5-kt-XeT" secondAttribute="top" constant="5" id="xzV-Ga-K2o"/>
+                                                <constraint firstAttribute="bottom" secondItem="aDb-y4-s4H" secondAttribute="bottom" constant="10" id="yJl-E5-LHM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationImageView" destination="iVR-oY-Jyd" id="ota-vF-Huu"/>
+                                            <outlet property="restaurantImageView" destination="TFf-xe-MIc" id="i49-lT-nj4"/>
+                                            <outlet property="restaurantLocationLabel" destination="Gfa-X3-lLu" id="hj3-PH-8ju"/>
+                                            <outlet property="restaurantNameLabel" destination="aDb-y4-s4H" id="cAh-7G-CiT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yKr-Ca-R5N" firstAttribute="leading" secondItem="XHA-S6-JSe" secondAttribute="leading" id="LAi-cg-FXN"/>
+                            <constraint firstItem="yKr-Ca-R5N" firstAttribute="trailing" secondItem="XHA-S6-JSe" secondAttribute="trailing" id="VWD-gz-1P2"/>
+                            <constraint firstAttribute="bottom" secondItem="yKr-Ca-R5N" secondAttribute="bottom" id="ZzH-xA-kWR"/>
+                            <constraint firstItem="yKr-Ca-R5N" firstAttribute="top" secondItem="XHA-S6-JSe" secondAttribute="top" id="jGY-x9-31h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XHA-S6-JSe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FoodSearch" id="bHt-QV-bLs"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="yKr-Ca-R5N" id="fQv-AC-wLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBi-oJ-bLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2582.608695652174" y="162.05357142857142"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Tdn-cf-iKn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="42D-Qg-utm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="Dl8-2A-Sdj"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BKO-lF-ObX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="35"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X1a-l7-H7W" kind="relationship" relationship="rootViewController" id="SHH-Eh-GqG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3X-94-ZtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.4637681159422" y="162.05357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="search" width="30" height="30"/>
+    </resources>
+</document>
